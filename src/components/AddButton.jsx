@@ -15,6 +15,8 @@ export default function AddButton(){
     const priority = useRef(0)
 
     const handleDialog = () => {
+        title.current = null;
+        priority.current = 0;
         setDialog(!dialog)
     }
 
@@ -74,7 +76,7 @@ export default function AddButton(){
                             </form>
                             </div>
                             <div className="flex justify-end gap-4">
-                                <button type="button" className="p-4 rounded-full bg-slate-50">
+                                <button onClick={handleDialog} type="button" className="p-4 rounded-full bg-slate-50">
                                     Cancel
                                 </button>
                                 <button onClick={submitTaskForm} type="submit" className="border border-slate-100 p-4 rounded-full bg-slate-100 hover:bg-slate-200">
