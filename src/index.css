@@ -1,0 +1,15 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font */
+@font-face {
+    font-family: 'lufga';
+    src: local('lufga'),
+        url('./assets/font/Fontspring-DEMO-lufga-regular.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* ancho del scrollbar */
+}
