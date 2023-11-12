@@ -1,9 +1,9 @@
-import { AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineCheck, AiOutlineDelete } from "react-icons/ai";
 import { useTaskStore } from "../store/tasks";
 
 export default function Task({id, title, isDone, priority}){
 
-    const { completeTask } = useTaskStore()
+    const { completeTask, deleteTask } = useTaskStore()
 
     const handleDrag = (e) => {
         console.log(e);
@@ -20,7 +20,9 @@ export default function Task({id, title, isDone, priority}){
                 {
                     isDone 
                     ?
-                    null
+                    <div  onClick={() => deleteTask(id)} className="p-3 rounded-full opacity-50 backdrop-brightness-90 hover:opacity-100">
+                        <AiOutlineDelete className="text-2xl" />
+                    </div>
                     :
                     <div  onClick={() => completeTask(id)} className="p-3 rounded-full opacity-50 backdrop-brightness-90 hover:opacity-100">
                         <AiOutlineCheck className="text-2xl" />
