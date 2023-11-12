@@ -27,7 +27,7 @@ export default function Navbar({tasks}){
                 {
                     NAV_OPTIONS.map(({title, type}) => (
                         <li onClick={() => selectFilter(type)} key={title} className="flex items-center px-6 py-2 border rounded-full opacity-60 hover:opacity-100 hover:border-gray-400 cursor-pointer">
-                            <span>
+                            <span className="sm:text-sm">
                                 {title}
                             </span>
                             <span className="ml-3 text-xs py-2 px-3 rounded-full bg-slate-100">

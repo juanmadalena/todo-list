@@ -53,7 +53,7 @@ export default function AddButton(){
                 dialog ?
                 <ModalContainer>
                     <section className="border flex items-center justify-center h-full w-full">
-                        <div className="flex justify-between flex-col h-96 w-9/12 md:w-1/3 rounded-3xl py-4 px-3 bg-slate-50 bg-opacity-95 shadow-xl">
+                        <div className="flex justify-between flex-col h-96 w-11/12 md:w-1/3 rounded-3xl py-4 px-3 bg-slate-50 bg-opacity-95 shadow-xl">
                             <div className="">
                                 <button onClick={handleDialog} className="p-4 rounded-full bg-slate-100 hover:bg-slate-200">
                                     <AiOutlineClose />

@@ -10,7 +10,7 @@ export default function Task({id, title, isDone, priority}){
     }
 
     return (
-        <section onDrag={handleDrag} className={` ${isDone ? 'opacity-30' : 'opacity-100'} flex justify-between px-6 h-28 w-full sm:h-28 ${priority ? 'bg-yellow-100' : 'bg-slate-100'} rounded-3xl`}>
+        <section onDrag={handleDrag} className={` ${isDone ? 'opacity-30' : 'opacity-100'} flex justify-between px-6 h-20 w-full sm:h-24 ${priority ? 'bg-yellow-100' : 'bg-slate-100'} rounded-3xl`}>
             <section className="flex items-center">
                 <h4 className={`text-2xl font-semibold ${isDone ? 'line-through' : ''}`}>
                     { title }
