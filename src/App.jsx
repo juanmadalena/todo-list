@@ -22,7 +22,10 @@ function App() {
 
   const { tasks } = useTaskStore()
 
-  const {important, regular} = Object.groupBy(tasks, ({priority}) => priority ? 'important' : 'regular')
+  // const {important, regular} = Object.groupBy(tasks, ({priority}) => priority ? 'important' : 'regular')
+
+  const important = tasks.filter(({priority}) => priority);
+  const regular = tasks.filter(({priority}) => !priority);
 
   return (
     <>
