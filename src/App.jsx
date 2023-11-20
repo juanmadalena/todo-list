@@ -7,7 +7,6 @@ import AddButton from './components/AddButton'
 import { useTaskStore } from './store/tasks'
 import { AiOutlineUnorderedList, AiOutlineFire } from 'react-icons/ai'
 import { useEffect, useRef } from 'react'
-import ModalContainer from './components/ModalContainer'
 
 function App() {
 
@@ -22,10 +21,13 @@ function App() {
 
   const { tasks } = useTaskStore()
 
-  // const {important, regular} = Object.groupBy(tasks, ({priority}) => priority ? 'important' : 'regular')
-
   const important = tasks.filter(({priority}) => priority);
   const regular = tasks.filter(({priority}) => !priority);
+  const done = tasks.filter(({is_done}) => is_done == 1);
+
+  useEffect(()=>{
+    document.title = `${(important.length + regular.length) - done.length > 0 ? `(${tasks?.length})` : ''} Todo List`
+  }, [tasks])
 
   return (
     <>
