@@ -26,7 +26,7 @@ function App() {
   const done = tasks.filter(({is_done}) => is_done == 1);
 
   useEffect(()=>{
-    document.title = `${(important.length + regular.length) - done.length > 0 ? `(${tasks?.length})` : ''} Todo List`
+    document.title = `${tasks.length - done.length > 0 ? `(${tasks?.length - done.length})` : ''} Todo List`
   }, [tasks])
 
   return (
